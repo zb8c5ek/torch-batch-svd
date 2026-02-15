@@ -18,7 +18,7 @@ cuda_extension = CUDAExtension(
     sources=ext_src,
     libraries=["cusolver", "cublas"],
     include_dirs=[include_dir],
-    extra_compile_args={"cxx": ["-O2", "-Wno-unknown-pragmas"], "nvcc": ["-O2"]},
+    extra_compile_args={"cxx": ["/O2"], "nvcc": ["-O2", "-allow-unsupported-compiler"]},
 )
 
 setup(
